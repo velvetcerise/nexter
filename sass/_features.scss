@@ -1,11 +1,32 @@
 .features {
-    background-color: $color-grey-light-2;
+    background-color: $color-grey-light-1;
     grid-column: center-start / center-end;
 
     margin: 15rem 0;
 
     // creating an implicit grid
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr) );
     grid-gap: 6rem;
+    align-items: start;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+    //  rows can be not specified, they autosize of the content
+
+    &__icon {
+        fill:  $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1 / span 2; // x / -1 = not the end of the grid, the end of the explicit grid --> 
+        transform: translateY(-1rem);
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
 }
