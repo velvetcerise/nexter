@@ -41,8 +41,8 @@ body {
     // Never grows larger than 140px, but it adapts to the vw
     grid-template-columns: [sidebar-start ] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; // 14rem / 8 = 142.5px -> 14rem
 
-    & > * {
-        padding: 40px;  
-        font-size: 3rem;
-    }
+    // & > * {
+    //     padding: 40px;  
+    //     font-size: 3rem;
+    // }
 }
